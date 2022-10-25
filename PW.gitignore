@@ -1,3 +1,5 @@
-#Password
-Username = 
-Password = 
+# Add config file
+config.py
+
+# DS_Store
+.DS_Store
