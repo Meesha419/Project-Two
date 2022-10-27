@@ -5,7 +5,7 @@ COVID-19 World Vaccination Progress
 https://www.kaggle.com/datasets/gpreda/covid-world-vaccination-progress?select=country_vaccinations.csv
 There are two CSV files used to extract, transform and load data.
 	country vaccinations 
-	country_vaccinations_by_manufacturer
+	worldwide covid data
 from the two data sets we are going to find:
 •	Which manufacturer made most/how many vaccines across the world 
 •	Which vaccine is used most across the world 
@@ -19,6 +19,36 @@ Transformation
 	New data frame there won’t be a date (it will be dropped)
 		
 Load
-Combine data into one table (based on the country name/ Location, vaccine name etc…)
+Combine data into one table (based on the country name/ Location, vaccine name etc…) try to get more meaningful information from both files.
  
 
+Team Members:
+- Myrna
+- Rasika
+- Neha
+- Archana
+Tools Used:
+Pandas
+SQL Alchemy
+Pymongo
+MongoDB
+PostgreSQL
+
+Extract
+Imported worldwide covid data and country vaccinations csv files from Kaggle.com into Pandas.
+
+Transfrom
+Dropped unwanted columns from both csv files and  filtered for:
+
+
+Merged data frames based on country
+Load
+PostgreSQL
+Created world happiness db in PostgreSQL with seperate tables for each year.
+Imported data into tables directly from Pandas using SQL Alchemy engine.
+MongoDB
+Used Pymongo to create a connection from Pandas to MongoDB local host.
+Converted Pandas dataframes using "to_dict" to ensure proper upload in JSON format.
+Included a try and except condition to verify database connection and data upload was successful for both datasets.
+Insights
+An imortant aspect of completing this project was deciding which type of database would be best suited; SQL or NoSQL to store our data. Considering there are only two (unrelated) data tables involved, it makes more sense to use MongoDB here than a relational database like SQL.
