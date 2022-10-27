@@ -1,24 +1,56 @@
+Project 2 - ETL
 
-Project Proposal
-COVID-19 World Vaccination Progress
-(Kaggle)
-https://www.kaggle.com/datasets/gpreda/covid-world-vaccination-progress?select=country_vaccinations.csv
-There are two CSV files used to extract, transform and load data.
-	country vaccinations 
-	country_vaccinations_by_manufacturer
-from the two data sets we are going to find:
-•	Which manufacturer made most/how many vaccines across the world 
-•	Which vaccine is used most across the world 
+Worldwide COVID-19 data 
 
-ETL
-Extract the data
-	CSV to dataframes 
-Transformation 
-	Most recent date and filtered data
-	Drop some of the columns that doesn’t include in the new Data frame (I:e: date etc.)
-	New data frame there won’t be a date (it will be dropped)
-		
-Load
-Combine data into one table (based on the country name/ Location, vaccine name etc…)
+Group members:
+	Myrna 
+	Archana 
+	Neha 
+	Rasika 
+
+
+Datasets used: 
+(Source - Kaggal)
+     worldwide_covid_data 
+     https://www.kaggle.com/datasets/anandhuh/covid19-in-world-countrieslatest-data?select=worldwide+covid+data.csv
+
+    country vaccinations 
+    https://www.kaggle.com/datasets/gpreda/covid-world-vaccination-progress?select=country_vaccinations.csv
+
+Question to answer:
+Did the vaccinations slowed down the spread of Covid-19
+
+Breakdown of Tasks:
+1.	Preprocessing data
+2.	Extract 
+3.	Transform
+4.	Load
+
  
+Tools Used:
+Pandas
+SQL Alchemy
+PostgreSQL
 
+Extract
+Imported worldwide covid data and country vaccinations csv files from Kaggle.com into Pandas.
+
+Transfrom
+Dropped unwanted columns from both csv files and  filtered for:
+
+Load
+Relational database PostgresSQL has been used to load the data.
+Merged data frames based on country
+
+
+Created covid data and worlwide db in PostgreSQL with seperate tables for total vaccine and infect, deaths.
+Imported data into tables directly from Pandas using SQL Alchemy engine.
+
+pgAdmin4
+Used sqlalchemy engine for a postgresql databaseto create a database connection from Pandas to pgAdmin.
+Created tables in  postgres DB that has the data for the Dataframe (df).
+Data in DF will get inserted in your postgres table.
+
+
+Insights
+An imortant aspect of completing this project was deciding which type of database would be best suited; SQL or NoSQL to store our data. Considering there are only two (unrelated) data tables involved, it makes more sense to use MongoDB here than a relational database like SQL.
